@@ -1,0 +1,1 @@
+git+https://github.com/vbutoma/scrapy.git@1.5.1.1

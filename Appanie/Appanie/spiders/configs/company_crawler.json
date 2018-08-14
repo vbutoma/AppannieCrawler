@@ -1,0 +1,12 @@
+{
+  "user": {
+    "email": "vit.butoma@gmail.com",
+    "password": ""
+  },
+  "page": {
+    "home": "https://www.appannie.com",
+    "login": "https://www.appannie.com/account/login/",
+    "after_login": "/dashboard/home/",
+    "company": "https://www.appannie.com/ajax/company/{}/apps/table_data/?page={}&page_interval={}&orderby=app_with_links&desc=f"
+  }
+}

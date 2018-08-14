@@ -1,0 +1,7 @@
+.idea/
+venv/
+
+# temp files
+abacaba
+page.html
+page_details.html
