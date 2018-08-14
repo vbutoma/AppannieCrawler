@@ -3,6 +3,9 @@
 from scrapy import Item, Field
 from datetime import datetime, date
 
+MIN_DATE = datetime.strptime('1900-01-01', '%Y-%m-%d')
+MAX_DATE = datetime.strptime('2100-01-01', '%Y-%m-%d')
+
 
 class PublishedApp(Item):
     name = Field()
@@ -30,8 +33,8 @@ class PublishedApp(Item):
             publisher=publisher
         )
 
-    def date_filter(self, order='elder', filter_date=None):
-        pass
+    def check_date(self, start_date=MIN_DATE, end_date=MAX_DATE):
+        return start_date <= self['release_date'] <= end_date
 
 
 class VersionApp(Item):
@@ -55,3 +58,6 @@ class VersionApp(Item):
             creation_date=creation_date,
             version=version
         )
+
+    def check_date(self, start_date=MIN_DATE, end_date=MAX_DATE):
+        return start_date <= self['creation_date'] <= end_date

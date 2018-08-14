@@ -1,6 +1,6 @@
 .idea/
 venv/
-
+*.pyc
 # temp files
 abacaba
 page.html

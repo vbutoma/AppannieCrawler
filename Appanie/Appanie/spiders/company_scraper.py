@@ -28,7 +28,7 @@ class CompanyScraper(CrawlSpider):
 
     name = 'CompanyScraper'
 
-    def __init__(self, company_id=None, start_date=None, end_date=None):
+    def __init__(self, company_id='gismart', start_date='2017-07-11', end_date='2018-07-11'):
         super(CompanyScraper, self).__init__()
         logger.info(company_id)
         self.company_id = company_id
